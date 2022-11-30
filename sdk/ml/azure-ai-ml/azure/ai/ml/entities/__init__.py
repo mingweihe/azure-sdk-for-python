@@ -93,6 +93,7 @@ from ._workspace.diagnose import (
     DiagnoseResult,
     DiagnoseWorkspaceParameters,
 )
+from ._workspace.networking import Networking, NetworkRuleMeta
 from ._workspace.private_endpoint import EndpointConnection, PrivateEndpoint
 from ._workspace.workspace import Workspace
 from ._workspace.workspace_keys import WorkspaceKeys, NotebookAccessKeys, ContainerRegistryCredential
@@ -158,6 +159,8 @@ __all__ = [
     "DiagnoseResponseResult",
     "DiagnoseResponseResultValue",
     "DiagnoseWorkspaceParameters",
+    "Networking",
+    "NetworkRuleMeta",
     "PrivateEndpoint",
     "EndpointConnection",
     "CustomerManagedKey",

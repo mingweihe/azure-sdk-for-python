@@ -18,6 +18,7 @@ from azure.ai.ml.entities._resource import Resource
 from azure.ai.ml.entities._util import load_from_dict
 
 from .customer_managed_key import CustomerManagedKey
+from .networking import Networking, NetworkRuleMeta
 
 
 class Workspace(Resource):
@@ -40,6 +41,7 @@ class Workspace(Resource):
         public_network_access: str = None,
         identity: IdentityConfiguration = None,
         primary_user_assigned_identity: str = None,
+        networking: Networking = None,
         **kwargs,
     ):
 
@@ -106,6 +108,7 @@ class Workspace(Resource):
         self.public_network_access = public_network_access
         self.identity = identity
         self.primary_user_assigned_identity = primary_user_assigned_identity
+        self.networking = networking
 
     @property
     def discovery_url(self) -> str:
